@@ -64,7 +64,7 @@ $(document).on('click', '#add', function(){
       age: parseInt(prompt("Inserisci la tua età:"))
     }
   );
-  printArray();
+  printNew();
 });
 
 
@@ -84,5 +84,14 @@ function printArray() {
     console.log("Cognome: " + student['lastName']);
     console.log("Anni: " + student['age']);
     console.log('--------------');
+  }
+}
+
+function printNew() {
+  var limit = arrStudents.length;
+  for (var i = limit; i <= arrStudents[limit]; i++) {
+    var htmlMsg = '<li><strong>Nome:</strong> ' + student['firstName'] + '<br><strong>Cognome:</strong> ' + student['lastName'] + '<br><strong>Anni:</strong> ' + student['age'] + '</li>';
+    var studentList = document.getElementById('studentList');
+    studentList.innerHTML += htmlMsg;
   }
 }

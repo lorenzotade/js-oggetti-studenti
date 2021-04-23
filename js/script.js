@@ -37,28 +37,34 @@ var arrStudents = [
 
 // chiamo la funzione per inserire oggetto
 // con target il mio array di oggetti
-insertStudent(arrStudents);
+//insertStudent(arrStudents);
 
 // con questo ciclo for..of + for..in stampo a 
 // video tutti i valori di ogni singolo 
 // oggetto nell'array
-for (var student of arrStudents) {
+/* for (var student of arrStudents) {
   for (var key in student) {
     console.log(student[key]);
   }
   console.log('--------------');
 }
 
-console.log("===============\nsecondo ciclo for\n===============");
+console.log("===============\nsecondo ciclo for\n==============="); */
+
+var htmlName = '<li>"Nome: " + student[\'firstName\']);</li><br>';
+var htmlSurname = '<li>"Cognome: " + student[\'lastName\']);</li><br>';
+var htmlAge = '<li>"Anni: " + student[\'age\']);</li><br>';
 
 // con questo ciclo for..of stampo a video
 // in forma umana i valori di ogni singolo
 // oggetto nell'array.
-for (var student of arrStudents) {
-  console.log("Nome: " + student['firstName']);
+for (var i = 0; i < arrStudents.length; i++) {
+  var studentList = document.getElementById('studentList');
+  studentList.innerHTML += studentList + htmlName + htmlSurname + htmlAge;
+  /* console.log("Nome: " + student['firstName']);
   console.log("Cognome: " + student['lastName']);
   console.log("Anni: " + student['age']);
-  console.log('--------------');
+  console.log('--------------'); */
 }
 
  // funzione per inserire uno studente nell'array.

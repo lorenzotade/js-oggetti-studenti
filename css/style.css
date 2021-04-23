@@ -26,6 +26,15 @@ body {
 .app button {
   padding: 5px 15px;
   margin-bottom: 15px;
+  background-color: lightcoral;
+  border: 0;
+  border-radius: 10px;
+}
+.app button:hover {
+  transform: scale(1.1);
+}
+.app button:active {
+  background-color: rgba(239,128,128,.8);
 }
 .app ul {
   list-style: none;

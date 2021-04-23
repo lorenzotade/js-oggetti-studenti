@@ -51,14 +51,15 @@ var arrStudents = [
 
 console.log("===============\nsecondo ciclo for\n==============="); */
 
-var htmlName = '<li>"Nome: " + student[\'firstName\']);</li><br>';
-var htmlSurname = '<li>"Cognome: " + student[\'lastName\']);</li><br>';
-var htmlAge = '<li>"Anni: " + student[\'age\']);</li><br>';
+
 
 // con questo ciclo for..of stampo a video
 // in forma umana i valori di ogni singolo
 // oggetto nell'array.
 for (var i = 0; i < arrStudents.length; i++) {
+  var htmlName = '<li>Nome: ' + student['firstName'] + '</li><br>';
+  var htmlSurname = '<li>Cognome: ' + student['lastName'] + '</li><br>';
+  var htmlAge = '<li>Anni: ' + student['age'] + '</li><br>';
   var studentList = document.getElementById('studentList');
   studentList.innerHTML += studentList + htmlName + htmlSurname + htmlAge;
   /* console.log("Nome: " + student['firstName']);
